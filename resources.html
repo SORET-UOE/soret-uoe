@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Resources | SORET</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
   <style>
     :root {
       --primary-color: #00796B;
@@ -59,32 +58,24 @@
       color: var(--primary-color);
     }
 
-    .section-nav {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .section-nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .section-nav a {
-      color: var(--accent-color);
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
+    .section-tabs {
       background-color: var(--background-dark);
+      text-align: center;
+      padding: 1rem 0;
     }
 
-    .section-nav a:hover {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
+    .section-tabs a {
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--primary-color);
+      color: var(--light-text-color);
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section-tabs a:hover {
+      background-color: var(--accent-color);
     }
 
     main {
@@ -136,17 +127,6 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-
-    @media (max-width: 600px) {
-      .resources-header h1 {
-        font-size: 1.8rem;
-      }
-
-      .section-nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -154,26 +134,27 @@
 <header>
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="resources.html">📁 Resources</a></li>
+      <li><a href="contact.html">✉️ Contact</a></li>
     </ul>
   </nav>
 </header>
 
+<div class="resources-header">
+  <h1>📥 SORET Resource Center</h1>
+  <p>Choose a category below to access spiritual tools, books, guides, and more.</p>
+</div>
+
+<div class="section-tabs">
+  <a href="#links">🔗 Links</a>
+  <a href="#books">📚 Books</a>
+  <a href="#soret">🔥 SORET</a>
+  <a href="#misc">📂 Misc</a>
+</div>
+
 <main>
-  <div class="resources-header">
-    <h1>📥 Downloadable Resources</h1>
-    <p>Click the category below to access useful documents, books, and links.</p>
-  </div>
-
-  <div class="section-nav">
-    <ul>
-      <li><a href="#links">🔗 Links</a></li>
-    </ul>
-  </div>
-
-  <section id="links" class="download-section">
+ <section id="links" class="download-section">
     <h2> Useful Links</h2>
     <ul class="download-list">
       <li><a href="https://bibleproject.com" target="_blank">Bible Project</a></li>
