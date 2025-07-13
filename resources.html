@@ -59,9 +59,13 @@
     }
 
     .section-tabs {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       background-color: var(--background-dark);
       text-align: center;
       padding: 1rem 0;
+      border-bottom: 2px solid var(--primary-color);
     }
 
     .section-tabs a {
@@ -90,6 +94,7 @@
       padding: 1.5rem;
       border-radius: 10px;
       margin-bottom: 2rem;
+      scroll-margin-top: 100px; /* Prevent overlap by sticky tab bar */
     }
 
     .download-section h2 {
@@ -142,7 +147,7 @@
 </header>
 
 <div class="resources-header">
-  <h1> SORET Resource Center</h1>
+  <h1>📥 SORET Resource Center</h1>
   <p>Choose a category below to access spiritual tools, books, guides, and more.</p>
 </div>
 
