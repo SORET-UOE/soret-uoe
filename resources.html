@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resources | Your Website Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resources | SORET</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --primary-color: #00796B;
@@ -34,9 +34,11 @@
     nav ul {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       margin: 0;
       padding: 0;
+      justify-content: center;
     }
 
     nav a {
@@ -45,15 +47,10 @@
       font-weight: bold;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
     .resources-header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 2rem auto 1rem;
+      padding: 0 1rem;
     }
 
     .resources-header h1 {
@@ -62,11 +59,53 @@
       color: var(--primary-color);
     }
 
+    .section-nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .section-nav a {
+      color: var(--accent-color);
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background-color: var(--background-dark);
+    }
+
+    .section-nav a:hover {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 1rem;
+    }
+
     .download-section {
       background-color: var(--background-dark);
-      padding: 2rem;
-      border-left: 6px solid var(--secondary-color);
-      border-radius: 12px;
+      border-left: 6px solid var(--primary-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .download-section h2 {
+      font-family: var(--font-family-heading);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
     }
 
     .download-list {
@@ -76,16 +115,13 @@
 
     .download-list li {
       margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-weight: 600;
     }
 
     .download-list a {
-      color: var(--accent-color);
       text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      color: var(--accent-color);
+      transition: 0.3s;
     }
 
     .download-list a:hover {
@@ -94,60 +130,83 @@
     }
 
     footer {
-      text-align: center;
-      padding: 1rem;
       background-color: var(--primary-color);
       color: var(--light-text-color);
-      margin-top: 3rem;
-    }
-
-    .icon {
-      font-size: 1.3rem;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
 
     @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-
       .resources-header h1 {
         font-size: 1.8rem;
+      }
+
+      .section-nav ul {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <!-- Add more links as needed -->
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <div class="resources-header">
-      <h1>📥 Downloadable Resources</h1>
-      <p>Access important documents, forms, and materials below.</p>
-    </div>
+<main>
+  <div class="resources-header">
+    <h1>📥 Downloadable Resources</h1>
+    <p>Click the category below to access useful documents, books, and links.</p>
+  </div>
 
-    <section class="download-section">
-      <ul class="download-list">
-        <li>📄 <a href="docs/Frank_Talk_To_Men_by_Francis_Bola_Akin_John_John,_Francis_Bola_Akin.pdf" download>Frank Talk To Men by Francis Bola Akin John John By Francis Bola Akin (PDF)</a></li>
-        <li>📝 <a href="docs/SORET CONSTITUTION NEW EDITION.pdf" download>SORET CONSTITUTION NEW EDITION (pdf)</a></li>
-         <li>📝 <a href="Holy Spirit And You.pdf" download>Holy Spirit And You (pdf)</a></li>
-      </ul>
-    </section>
-  </main>
+  <div class="section-nav">
+    <ul>
+      <li><a href="#links">🔗 Links</a></li>
+    </ul>
+  </div>
 
-  <footer>
-    &copy; 2025 South Rift Evangelistic Team (SORET). All rights reserved.
-  </footer>
+  <section id="links" class="download-section">
+    <h2> Useful Links</h2>
+    <ul class="download-list">
+      <li><a href="https://bibleproject.com" target="_blank">Bible Project</a></li>
+      <li><a href="https://desiringgod.org" target="_blank">Desiring God</a></li>
+      <li><a href="https://blueletterbible.org" target="_blank">Blue Letter Bible</a></li>
+    </ul>
+  </section>
+
+  <section id="books" class="download-section">
+    <h2> Christian Books</h2>
+    <ul class="download-list">
+      <li><a href="docs/Holy Spirit and You.pdf" download>Holy Spirit And You</a></li>
+      <li><a href="docs/Frank_Talk_To_Men_by_Francis_Bola_Akin_John_John,_Francis_Bola_Akin.pdf" download>Frank Talk To Men (Francis Bola Akin John)</a></li>
+    </ul>
+  </section>
+
+  <section id="soret" class="download-section">
+    <h2> SORET Materials</h2>
+    <ul class="download-list">
+      <li><a href="docs/SORET CONSTITUTION NEW EDITION.pdf" download>SORET ConstitutionNew Edition</a></li>
+    </ul>
+  </section>
+
+  <section id="misc" class="download-section">
+    <h2> Miscellaneous Downloads</h2>
+    <ul class="download-list">
+    </ul>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 SORET Team – All rights reserved.
+</footer>
 
 </body>
 </html>
